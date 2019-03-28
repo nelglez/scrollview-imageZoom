@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7aI-ds-7t3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0ID-AN-4Ok">
+            <objects>
+                <viewController id="7aI-ds-7t3" customClass="ViewController" customModule="ImagePinchToZoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RGc-PZ-3y1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-5K-G55">
+                                <rect key="frame" x="20" y="136" width="376" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This was me last year..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yv-3B-zNW">
+                                <rect key="frame" x="20" y="415" width="374" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HO1-fx-kUG"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zHh-5K-G55" id="8db-Rf-bh6"/>
+                        <outlet property="textLabel" destination="9yv-3B-zNW" id="omu-n5-iZb"/>
+                        <segue destination="rEJ-sz-FUs" kind="show" identifier="toScrollView" id="Ul5-jg-857"/>
+                        <segue destination="Vww-cQ-awO" kind="show" identifier="toThirdVC" id="mqR-XU-sH8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhN-vI-p30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="109.82142857142857"/>
+        </scene>
+        <!--Scroll View Controller-->
+        <scene sceneID="FPa-wo-nco">
+            <objects>
+                <viewController id="rEJ-sz-FUs" customClass="ScrollViewController" customModule="ImagePinchToZoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PYX-d4-Nnc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your image label..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JL-Gw-oCS">
+                                <rect key="frame" x="20" y="821" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="YCe-mQ-IX2"/>
+                                    <constraint firstAttribute="height" constant="21" id="dVa-Yd-VOJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4JL-Gw-oCS" firstAttribute="leading" secondItem="dPE-id-x6O" secondAttribute="leading" constant="20" id="JGb-EL-Jnq"/>
+                            <constraint firstItem="dPE-id-x6O" firstAttribute="bottom" secondItem="4JL-Gw-oCS" secondAttribute="bottom" constant="20" id="iHG-t3-cQv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dPE-id-x6O"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="4JL-Gw-oCS" id="Bnc-sZ-itX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qff-9f-36s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="116.51785714285714"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="ox4-xT-ykf">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="Vww-cQ-awO" customClass="ThirdViewController" customModule="ImagePinchToZoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vte-yz-h6z"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fQ-9W-EQ7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAC-8u-Ubk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-LV-rh6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo1" translatesAutoresizingMaskIntoConstraints="NO" id="a5J-h5-M4z">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a5J-h5-M4z" firstAttribute="top" secondItem="fVl-LV-rh6" secondAttribute="top" id="1Uj-ga-BUY"/>
+                                    <constraint firstAttribute="trailing" secondItem="a5J-h5-M4z" secondAttribute="trailing" id="bCf-Tg-oeS"/>
+                                    <constraint firstAttribute="bottom" secondItem="a5J-h5-M4z" secondAttribute="bottom" constant="-25" id="hyL-QB-zvX"/>
+                                    <constraint firstItem="a5J-h5-M4z" firstAttribute="leading" secondItem="fVl-LV-rh6" secondAttribute="leading" id="j7A-zG-S7m"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Vww-cQ-awO" id="ROc-K9-OXz"/>
+                                </connections>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is me last year..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10r-E2-gVl">
+                                <rect key="frame" x="20" y="821" width="159" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="dMk-yB-APG"/>
+                                    <constraint firstAttribute="height" constant="21" id="kGY-AV-PId"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fVl-LV-rh6" secondAttribute="trailing" id="3ih-3a-eo0"/>
+                            <constraint firstItem="fVl-LV-rh6" firstAttribute="leading" secondItem="hAC-8u-Ubk" secondAttribute="leading" id="57l-dg-k5b"/>
+                            <constraint firstItem="0fQ-9W-EQ7" firstAttribute="top" secondItem="10r-E2-gVl" secondAttribute="bottom" constant="20" id="6I6-ck-oDa"/>
+                            <constraint firstItem="10r-E2-gVl" firstAttribute="leading" secondItem="hAC-8u-Ubk" secondAttribute="leading" constant="20" id="Mjr-m6-f36"/>
+                            <constraint firstItem="fVl-LV-rh6" firstAttribute="top" secondItem="Vte-yz-h6z" secondAttribute="bottom" id="iEe-Hw-37o"/>
+                            <constraint firstItem="0fQ-9W-EQ7" firstAttribute="top" secondItem="fVl-LV-rh6" secondAttribute="bottom" id="jWn-lD-4ml"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v8M-Sf-GW8"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="imageView" destination="a5J-h5-M4z" id="oXk-39-jQf"/>
+                        <outlet property="imageViewBottomConstraint" destination="hyL-QB-zvX" id="XD4-en-ewc"/>
+                        <outlet property="imageViewLeadingConstraint" destination="j7A-zG-S7m" id="VHr-ZP-tVy"/>
+                        <outlet property="imageViewTopConstraint" destination="1Uj-ga-BUY" id="FPl-MK-Q49"/>
+                        <outlet property="imageViewTrailingConstraint" destination="bCf-Tg-oeS" id="suc-Hr-nQM"/>
+                        <outlet property="scrollView" destination="fVl-LV-rh6" id="yrN-fT-Zz2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRR-Uc-yAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500.0000000000002" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="3024" height="4032"/>
+        <image name="photo1" width="1024" height="768"/>
+    </resources>
+</document>
