@@ -17,10 +17,12 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var textLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
    // var photoName: String?
     var photo: UIImageView!
+    var text: String?
     
     fileprivate let thumbnailSize = CGSize(width: 500.0, height: 500.0)
     
@@ -32,6 +34,11 @@ class ThirdViewController: UIViewController {
             imageView.image = photo.image
            
         }
+        
+        if let text = text {
+            textLabel.text = text
+        }
+        
         //Need to call this here so that as soon as the view appears the image is sized correctly.
         updateMinZoomScaleForSize(view.bounds.size)
     }

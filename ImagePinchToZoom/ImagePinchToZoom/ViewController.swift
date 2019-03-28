@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             
            // destinationVC?.photoName = "photo1"
             destinationVC?.photo = imageView
+            destinationVC?.text = textLabel.text
           
         }
      

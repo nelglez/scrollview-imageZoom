@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7aI-ds-7t3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DMP-TI-trF">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,6 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HO1-fx-kUG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HGo-vh-QEF"/>
                     <connections>
                         <outlet property="imageView" destination="zHh-5K-G55" id="8db-Rf-bh6"/>
                         <outlet property="textLabel" destination="9yv-3B-zNW" id="omu-n5-iZb"/>
@@ -42,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhN-vI-p30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100.00000000000001" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1010.144927536232" y="109.82142857142857"/>
         </scene>
         <!--Scroll View Controller-->
         <scene sceneID="FPa-wo-nco">
@@ -76,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qff-9f-36s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.89855072463774" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1713.0434782608697" y="116.51785714285714"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="ox4-xT-ykf">
@@ -87,11 +88,11 @@
                         <viewControllerLayoutGuide type="bottom" id="0fQ-9W-EQ7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hAC-8u-Ubk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-LV-rh6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo1" translatesAutoresizingMaskIntoConstraints="NO" id="a5J-h5-M4z">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -107,8 +108,8 @@
                                     <outlet property="delegate" destination="Vww-cQ-awO" id="ROc-K9-OXz"/>
                                 </connections>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is me last year..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10r-E2-gVl">
-                                <rect key="frame" x="20" y="821" width="159" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is me last year..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="10r-E2-gVl">
+                                <rect key="frame" x="20" y="733" width="159" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="159" id="dMk-yB-APG"/>
                                     <constraint firstAttribute="height" constant="21" id="kGY-AV-PId"/>
@@ -137,11 +138,30 @@
                         <outlet property="imageViewTopConstraint" destination="1Uj-ga-BUY" id="FPl-MK-Q49"/>
                         <outlet property="imageViewTrailingConstraint" destination="bCf-Tg-oeS" id="suc-Hr-nQM"/>
                         <outlet property="scrollView" destination="fVl-LV-rh6" id="yrN-fT-Zz2"/>
+                        <outlet property="textLabel" destination="10r-E2-gVl" id="T0K-tN-X47"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRR-Uc-yAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500.0000000000002" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2410.144927536232" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eOu-gQ-mKg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DMP-TI-trF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Yv-wo-ONQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7aI-ds-7t3" kind="relationship" relationship="rootViewController" id="5Ye-LN-ws5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jb4-3A-MtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
